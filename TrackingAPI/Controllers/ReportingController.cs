@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text.Json.Serialization;
 using System.Threading.Tasks;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 using TrackingLib;
@@ -18,6 +19,7 @@ namespace TrackingAPI.Controllers
         public ReportUnit Unit { get; set; }
     }
 
+    //[Authorize]
     [ApiController]
     [Route("reporting")]
     public class ReportingController : ControllerBase
